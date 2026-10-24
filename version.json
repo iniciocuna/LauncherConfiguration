@@ -1,5 +1,6 @@
 {
   "version": "1.0.1",
   "closeafterlaunch": true,
-  "download": "https://github.com/iniciocuna/LauncherConfiguration/releases"
+  "download": "https://github.com/iniciocuna/LauncherConfiguration/releases",
+  "assets": ["lan.en-us.json", "lan.es-mx.json"]
 }
