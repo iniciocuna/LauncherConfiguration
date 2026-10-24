@@ -1,0 +1,10 @@
+{
+    "Launcher.Title": "APTP Launcher",
+    "Launcher.LaunchButtonText": "Iniciar",
+    "Launcher.LaunchButtonWaitingText": "Cargando...",
+    "Launcher.LaunchButtonErrorText": "Error, intente de nuevo",
+    "Launcher.UpdateAvailableText": "Actualización disponible: {0}",
+    "Launcher.UpdateAvailableButtonText": "Descargar actualización del Launcher",
+    "Launcher.VersionText": "Versión {0}",
+    "Launcher.UpToDateText": "Versión {0} (actualizado)"
+}
