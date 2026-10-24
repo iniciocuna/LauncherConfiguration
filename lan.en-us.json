@@ -1,0 +1,10 @@
+{
+    "Launcher.Title": "APTP Game Launcher",
+    "Launcher.LaunchButtonText": "Play",
+    "Launcher.LaunchButtonWaitingText": "Launching...",
+    "Launcher.LaunchButtonErrorText": "Error, Try Again",
+    "Launcher.UpdateAvailableText": "Update available: {0}",
+    "Launcher.UpdateAvailableButtonText": "Download launcher update",
+    "Launcher.VersionText": "Version {0}",
+    "Launcher.UpToDateText": "Version {0} (up to date)"
+}
