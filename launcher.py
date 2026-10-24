@@ -16,7 +16,6 @@ os.makedirs(cache, exist_ok=True)
 RAW = "https://raw.githubusercontent.com/iniciocuna/LauncherConfiguration/main/"
 
 def load_json(name):
-    # Order: next to the .exe (testing) -> downloaded cache -> bundled inside the .exe
     for folder in (base, cache, bundle):
         try:
             with open(os.path.join(folder, name), encoding="utf-8") as f:
@@ -27,13 +26,12 @@ def load_json(name):
 
 def sync_assets(names):
     for name in names:
-        # Only accept names like lan.en-us.json, never paths, in case the repo is ever tampered with
         if not re.fullmatch(r"lan\.[a-z]{2}-[a-z]{2}\.json", name):
             continue
         try:
             with urllib.request.urlopen(RAW + name, timeout=5) as r:
                 data = r.read()
-            json.loads(data)   # make sure it's valid JSON before saving
+            json.loads(data)
             tmp = os.path.join(cache, name + ".tmp")
             with open(tmp, "wb") as f:
                 f.write(data)
@@ -93,8 +91,6 @@ ctk.CTkLabel(app, text=t("Launcher.Title"),
 status = ctk.CTkLabel(app, text=t("Launcher.VersionText", config.get("version", "?")),
                       font=ctk.CTkFont(size=12), text_color="gray60")
 status.pack(pady=(0, 20))
-
-# reset_button() and play() stay as they are, above or below this block
 
 play_btn = ctk.CTkButton(app, text=t("Launcher.LaunchButtonText"), command=play,
                          width=220, height=48, corner_radius=12,
